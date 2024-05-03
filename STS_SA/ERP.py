@@ -3,8 +3,7 @@ import numba as nb
 import math
 
 @nb.jit(parallel=True)
-
-def erp_similarity(t0, t1, g):
+def erp_dist(t0, t1, g):
     n0 = len(t0) + 1
     n1 = len(t1) + 1
     C = np.zeros((n0, n1))
